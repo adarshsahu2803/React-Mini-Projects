@@ -36,3 +36,5 @@ function App() {
 export default App;
 
 // 1. delete just on elemtnt from todoList
+// 2. add update todo component
+// 3. improve todo UI

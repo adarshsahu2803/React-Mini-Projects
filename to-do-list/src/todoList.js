@@ -25,11 +25,12 @@ function TodoList({ todos, deleteTodo, toggleTodo, updateTodo }) {
                         <div>
                             <input
                                 type="text"
-                                checked={todo.completed}
-                                onChange={() => toggleTodo(todo.id)}
+                                value={editText}
+                                onChange={(e) => setEditText(e.target.value)}
                             />
                             <button onClick={() => handleUpdate(todo.id)}>Save</button>
-                        </div>) : (
+                        </div>
+                    ) : (
                         <div>
                             <span style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>
                                 {todo.text}

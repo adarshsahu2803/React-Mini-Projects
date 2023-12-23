@@ -19,7 +19,7 @@ const App = () => {
   }
 
   const removeFromCart = (id) => {
-    const newCartItems = cartItems.filter((item) => item.id !== id);
+    const newCartItems = cartItems.filter((item, i) => i !== id);
     setCartItem(newCartItems);
   }
 

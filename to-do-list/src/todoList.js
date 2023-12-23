@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import './TodoList.css'
 
 function TodoList({ todos, deleteTodo, toggleTodo, updateTodo }) {
     const [editText, setEditText] = useState('');
@@ -22,7 +23,7 @@ function TodoList({ todos, deleteTodo, toggleTodo, updateTodo }) {
             {todos.map((todo) => (
                 <li key={todo.id}>
                     {editId === todo.id ? (
-                        <div>
+                        <div class="d1">
                             <input
                                 type="text"
                                 value={editText}
@@ -31,7 +32,7 @@ function TodoList({ todos, deleteTodo, toggleTodo, updateTodo }) {
                             <button onClick={() => handleUpdate(todo.id)}>Save</button>
                         </div>
                     ) : (
-                        <div>
+                        <div class="d2">
                             <span style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>
                                 {todo.text}
                             </span>

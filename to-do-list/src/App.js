@@ -15,7 +15,6 @@ function App() {
     }])
   }
 
-  // Function to toggle the completed state of a todo
   const toggleTodo = (todoId) => {
     const updatedTodos = todos.map((todo) =>
       todo.id === todoId ? { ...todo, completed: !todo.completed } : todo
@@ -36,7 +35,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div class="content">
       <h1>Todo List</h1>
       <TodoForm addTodo={addTodo} />
       {console.log(todos)}

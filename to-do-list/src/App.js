@@ -1,18 +1,22 @@
 import { useState } from 'react';
 import './App.css';
 import TodoForm from './TodoForm';
-import TodoList from './TodoList';
+import TodoList from './todoList';
 import { v4 as uuidv4 } from 'uuid';
+import { addItem, getAllTods } from './services';
 
 function App() {
   const [todos, setTodos] = useState([])
 
   const addTodo = (todoText) => {
+    addItem(todoText);
     setTodos([...todos, {
       id: uuidv4(),
       text: todoText,
       completed: false
     }])
+
+    console.log(getAllTods);
   }
 
   const toggleTodo = (todoId) => {

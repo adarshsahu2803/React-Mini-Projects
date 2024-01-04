@@ -2,10 +2,15 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 function Todos() {
-    use
+    const todos = useSelector(state => state.todos);
 
     return (
-        <div>Todos</div>
+        <>
+            <div>$todos$</div>
+            {todos.map((todo) => (
+                <div key={todo.id}>{todo.text}</div>
+            ))}
+        </>
     )
 }
 
